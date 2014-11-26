@@ -11,6 +11,7 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+<<<<<<< HEAD
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -19,6 +20,8 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+=======
+>>>>>>> sign-up
 /* universal */
 
 html {
@@ -178,6 +181,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+<<<<<<< HEAD
 }
 
 #error_explanation {
@@ -194,3 +198,6 @@ input {
     color: $state-danger-text;
   }
 }
+=======
+}
+>>>>>>> sign-up
