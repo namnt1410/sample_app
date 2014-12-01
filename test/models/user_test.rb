@@ -6,20 +6,12 @@ class UserTest < ActiveSupport::TestCase
   # end
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
-<<<<<<< HEAD
     	                     password: "foobar", password_confirmation: "foobar")
-=======
-                     password: "foobar", password_confirmation: "foobar")
->>>>>>> sign-up
   end
 
   test "should be valid" do
     assert @user.valid?
-<<<<<<< HEAD
   end
-=======
-  end  
->>>>>>> sign-up
 
   test "name should be present" do
     @user.name = "     "
@@ -50,7 +42,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-<<<<<<< HEAD
   test "email validation should reject invalid addresses" do
     invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
                            foo@bar_baz.com foo@bar+baz.com]
@@ -59,8 +50,7 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
     end
   end
-=======
->>>>>>> sign-up
+
   test "email addresses should be unique" do
     duplicate_user = @user.dup
     duplicate_user.email = @user.email.upcase
@@ -72,8 +62,8 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
-<<<<<<< HEAD
-=======
 
->>>>>>> sign-up
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end

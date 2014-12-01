@@ -1,6 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-<<<<<<< HEAD
-=======
-
->>>>>>> sign-up
+namnt:
+  name: NamNT
+  email: namnt@gmail.com
+  password_digest: <%= User.digest('password') %>
